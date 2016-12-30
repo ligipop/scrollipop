@@ -1,0 +1,381 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>scrollipop</title>
+		<meta charset = "utf-8"/>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>	
+		<link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,700" rel="stylesheet"> 
+
+		<style>
+			h1{
+				color:white;
+				font-size:1em;
+				font-family:'Quicksand',Lato,sans-serif;
+				font-weight:400;
+				text-align:center;	
+				text-transform:uppercase;
+				margin: 20% 0 8% 0;
+			}
+
+			h2{		
+				font-size:1em;
+				font-family:'Quicksand',Lato,sans-serif;
+				font-weight:300;
+				text-align:center;
+			}
+
+			h3{
+				color:white;
+				font-size:0.9em;
+				font-family:'Quicksand',Lato,sans-serif;
+				font-weight:300;
+				text-align:left;
+				width:85%;
+				margin:4% auto;
+				line-height:1.5em;
+				
+			}
+
+			pre{
+				color:black;
+				line-height:1.5em;
+				background-color:white;
+				margin:7% auto;
+				width:80%;
+				border-radius:5px;
+				text-align:left;
+				padding:1%;
+				height:auto;
+				overflow-x:scroll;
+			}
+
+		
+
+			code{
+				color:#66ffee;
+				font-size:1.1em;	
+			}
+
+			code.code_snippet{
+				position:relative;
+				left:5%;
+				color:purple;
+				font-size:1em;
+			}
+
+			p{
+				font-family:'Quicksand',Lato,sans-serif;	
+				letter-spacing: 0.07em;
+			}
+
+			nav{
+				background-color:rgba(0,0,0,1);
+				width:100%;
+				height:10%;
+				box-sizing:border-box;	
+			}
+
+
+			ul{	
+				position:fixed;
+				
+				list-style-type:none;
+				list-style:none;
+				width:100%;
+				
+				padding:0;
+				margin: 5% 0 0 0;
+				text-align:center;
+				box-sizing:border-box;
+			}
+
+			li{
+				font-size:0.9em;
+				font-family:'Quicksand',Lato,sans-serif;
+				font-weight:400;
+				padding:4%;
+				letter-spacing: 0.1em;
+				color:white;
+
+				display:inline;
+			}
+
+			li:hover{
+				
+				-moz-animation: color 2s infinite;
+				-webkit-animation:color 2s infinite;
+				-o-animation: color 2s infinite;
+				animation: color 2s infinite;
+			}
+
+			@-moz-keyframes color{
+				0%{ color:#ffffff; }
+				25%{ color:turquoise; }
+				50%{color:#ff66cc;}
+				75%{color:#ffce80;}
+				100%{color: #ffffff;}
+			}
+
+			.grid_1{
+				width:100%;
+				height:75%;
+				box-sizing:border-box;
+				text-align:center;
+				
+			}
+
+			.grid_2{
+				
+				width:100%;
+				height:10%;
+				box-sizing:border-box;	
+			}
+
+			
+
+			/*for footer*/
+			.grid_3{ 
+				width:100%;
+				height:12%;
+			}
+
+			
+		
+			.page{
+				/*background-color:#ffbb77;*/
+
+			}
+
+			#page_1{
+				background: -moz-linear-gradient(top left,#66ffee,#660022);
+
+				
+			}
+
+			#page_2{
+				height:auto !important;
+				overflow:visible;
+				background: black;
+				padding-bottom:10%;
+			}
+
+			#page_3{
+				background: -moz-linear-gradient(top left,#ffbb77,#66cccc);
+			}
+
+			.red_lolli{
+				position:absolute;
+				left:-20%;
+				top:20%;
+				margin:0 0 0 0;
+				height:90%;	
+				z-index:1;
+				
+			}
+
+			.swirl_lolli{
+				position:absolute;
+				left:25%;
+				top:45%;
+				height:60%;
+			}
+			.wheel_lolli{
+				position:absolute;
+				opacity:0.6;
+				top:50%;
+				left:10%;
+				height:70%;
+			}
+
+			.logo{
+				position:relative;
+				top:25%;
+				width:90%;
+				height:40%;
+				z-index:2;
+			}
+
+			.intro{
+				position:relative;
+				display:inline;
+				top:40%;
+				font-size:0.85em;
+				font-weight:700;
+				
+			}
+
+			.intro p{
+				display:inline-block;
+				padding: 0 1% 0 2%;
+				margin:1% 0 0 0;
+				
+			}
+
+			.demo_hrz{
+				position:relative;
+				font-weight:300;
+				font-size:0.83em;
+				top:50%;
+				border:1px solid;
+				border-color:rgba(255, 255, 255, 0.5);
+				color:white;
+				background: rgb(54, 25, 25); 
+				background: rgba(54, 25, 25, .3);
+				border-radius:10px;
+				letter-spacing: 0;
+				padding:1%;
+				margin:0 auto;
+				width:78.5%;
+				cursor:pointer;
+				transition: background 0.3s ease;
+			}
+
+			.demo_hrz:hover{
+				background:rgba(54, 25, 25, 0);
+			}
+
+
+
+		</style>
+	</head>
+
+
+
+
+	<body>
+			
+		<div id="page_1" class="page">
+			<nav>
+				<ul>
+					<li>Home</li>
+					<li>Usage</li>
+					<li>Github</li>
+				</ul>
+			</nav>
+			<div class="grid_1">
+				
+				<!--<img class="swirl_lolli" src="./images/swirl_lolli.svg"/>-->
+				<img class="logo" src="./images/scrollipop_logo.svg"/>
+				<br>
+				<div class="intro">
+					<p>A lightweight,</p>
+					<p>No dependency,</p>
+					<p>Navigation-based,</p>
+					<p>Site scroller</p>
+				</div>
+				<p class="demo_hrz">Demo it in horizontal mode!</p>
+			</div>
+		</div>
+
+		<div id="page_2" class="page">
+			<div class="grid_2"></div>
+			<div class="grid_1">
+				<h1>Installation</h1>
+				<h1>Requirements & Usage</h1>
+
+				<h3>Any <code>div</code> placed as a child of <code>body</code> will create a fullscreen page.</h3>
+<pre>
+<code class="code_snippet">&lt;body&gt;
+  &lt;div&gt;&lt;&excl;&minus;&minus;Page 1&minus;&minus;&gt;&lt;&sol;div&gt;
+  &lt;div&gt;&lt;&excl;&minus;&minus;Page 2&minus;&minus;&gt;&lt;&sol;div&gt;
+  &lt;div&gt;&lt;&excl;&minus;&minus;Page 3&minus;&minus;&gt;&lt;&sol;div&gt;
+&lt;&sol;body&gt;
+</code>
+</pre>
+				<h3>Navigation MUST be defined by the <code>nav</code> tag. You may utilize the <code>nav > ul > li</code> or the <code>nav > a</code> format.</h3> 
+
+				<h3>Within, create one link per number of pages. Name them whatever you want!</h3>
+				
+<pre>
+<code class="code_snippet">&lt;body&gt;
+  &lt;div&gt; &lt;&excl;&minus;&minus;Page 1 div&minus;&minus;&gt;
+     &lt;nav&gt; &lt;&excl;&minus;&minus;Navigation&minus;&minus;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Link 1&lt;&sol;li&gt;
+       	  &lt;li&gt;Link 2&lt;&sol;li&gt;
+          &lt;li&gt;Link 3&lt;&sol;li&gt;
+        &lt;&sol;ul&gt;
+     &lt;&sol;nav&gt;
+     &lt;p&gt;Hello World!&lt;&sol;p&gt; &lt;&excl;&minus;&minus;Other design elements on page&minus;&minus;&gt;
+  &lt;&sol;div&gt;
+</code>
+</pre>
+
+				
+
+				<h3>The <code>nav</code> tag may also be placed as a child of <code>body</code>. The navigation MUST be either a child of <code>body</code> or a child of any page <code>div</code>.</h3>
+<pre>
+<code class="code_snippet">&lt;body&gt;
+  &lt;nav&gt; &lt;&excl;&minus;&minus;Navigation&minus;&minus;&gt;
+    &lt;a&gt;Link 1&lt;&sol;a&gt;
+    &lt;a&gt;Link 2&lt;&sol;a&gt;
+    &lt;a&gt;Link 3&lt;&sol;a&gt;
+  &lt;&sol;nav&gt;
+
+  &lt;div&gt; &lt;&excl;&minus;&minus;Page 1 div&minus;&minus;&gt;
+     &lt;p&gt;Hello World!&lt;&sol;p&gt; &lt;&excl;&minus;&minus;Other design elements on page&minus;&minus;&gt;
+  &lt;&sol;div&gt;
+</code>
+</pre>
+
+				<h3>If multiple navigation menus exist and are children of either <code>body</code> or a page <code>div</code>, add the class name <code>main_nav</code> to whichever navigation instance(s) meant to iterate the pages. </h3>
+
+<pre>
+<code class="code_snippet">&lt;body&gt;
+  &lt;div&gt; &lt;&excl;&minus;&minus;Page 1 div&minus;&minus;&gt;
+     &lt;nav&gt; &lt;&excl;&minus;&minus;This menu will NOT scroll through the site's pages.&minus;&minus;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Link 1&lt;&sol;li&gt;
+       	  &lt;li&gt;Link 2&lt;&sol;li&gt;
+          &lt;li&gt;Link 3&lt;&sol;li&gt;
+        &lt;&sol;ul&gt;
+     &lt;&sol;nav&gt;
+
+     &lt;nav class="main_nav"&gt; &lt;&excl;&minus;&minus;This menu WILL scroll through the site's pages&minus;&minus;&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Link 1&lt;&sol;li&gt;
+       	  &lt;li&gt;Link 2&lt;&sol;li&gt;
+          &lt;li&gt;Link 3&lt;&sol;li&gt;
+        &lt;&sol;ul&gt;
+     &lt;&sol;nav&gt;
+
+     &lt;p&gt;Hello World!&lt;&sol;p&gt; &lt;&excl;&minus;&minus;Other design elements on page&minus;&minus;&gt;
+  &lt;&sol;div&gt;
+</code>
+</pre>
+
+				<h3>If multiple navigations exist, only <code>navs</code> with the class name <code>main_nav</code> will iterate the site. If none are identified with this class name, none will function.</h3>
+			</div>
+			
+
+<pre>
+<code class="code_snippet">&lt;body&gt;
+  &lt;div&gt;
+     &lt;p&gt;Hello World!&lt;&sol;p&gt;
+    
+     &lt;nav id="best_nav" class="main_nav inst1"&gt; 
+        &lt;ul&gt;
+          &lt;li&gt;Link 1&lt;&sol;li&gt;
+       	  &lt;li&gt;Link 2&lt;&sol;li&gt;
+          &lt;li&gt;Link 3&lt;&sol;li&gt;
+        &lt;&sol;ul&gt;
+     &lt;&sol;nav&gt;
+  &lt;&sol;div&gt;
+</code>
+</pre>
+
+				<h3>You may give any elements of your navigation an <code>id</code> or <code>class</code> to style with CSS or JS as usual.</h3>		
+
+				<h3>NOTE: This plugin reserves certain data attributes to function. Be careful when using them with HTML elements.</h3>	
+		</div>
+		<div></div>
+		
+
+		
+
+		<script type="text/javascript" src="scrollipop_vrt_clean.js"></script>	
+
+	</body>
+</html>
