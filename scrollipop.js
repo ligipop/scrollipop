@@ -40,13 +40,13 @@
 		     }
 
 
-		     function vOrH(){
-						if(scrolli === "vrt"){
-							return true;
-						}else if(scrolli === "hrz"){
-							return false;
-						}
-					}
+		    function vOrH(){
+				if(scrolli === "vrt"){
+					return true;
+				}else if(scrolli === "hrz"){		
+					return false;
+				}
+			}
 	   	
 
 		 	//Event handler for navigation button scroll animation
@@ -209,6 +209,7 @@
 		  		bodyEl.style.margin = 0;
 		  		bodyEl.style.padding = 0;
 		  		bodyEl.style.height = 100+"%";
+		  		bodyEl.style.width = 100+"%";
 		  		bodyEl.style.whiteSpace = "nowrap";
 		  		bodyEl.style.fontSize = 0;
 		  		bodyEl.style.overflowY ="hidden";
