@@ -38,12 +38,17 @@
 				
 			}
 
+			a{
+				text-decoration: none;
+				color:#66ffee;
+			}
+
 			pre{
 				color:black;
 				line-height:1.5em;
 				background-color:white;
 				margin:7% auto;
-				width:80%;
+				width:83%;
 				border-radius:5px;
 				text-align:left;
 				padding:1%;
@@ -55,7 +60,8 @@
 
 			code{
 				color:#66ffee;
-				font-size:1.1em;	
+				font-size:1.3em;
+				letter-spacing: 0.1em	
 			}
 
 			code.code_snippet{
@@ -251,7 +257,7 @@
 				<ul>
 					<li>Home</li>
 					<li>Usage</li>
-					<li>Github</li>
+					<li>Compatibility</li>
 				</ul>
 			</nav>
 			<div class="grid_1">
@@ -273,7 +279,42 @@
 			<div class="grid_2"></div>
 			<div class="grid_1">
 				<h1>Installation</h1>
-				<h1>Requirements & Usage</h1>
+
+				<h3>via <code>npm</code> :</h3>
+<pre>
+<code class="code_snippet">npm install scrollipop --save
+
+</code>
+</pre>	
+				<h3>Or download the package files from <a href="">Github</a>.</h3>
+
+				<h3>incorporate into the page:</h3>
+
+<pre>
+<code class="code_snippet">&lt;script src="scrollipop.js"&gt;&lt;&sol;script&gt;
+
+</code>
+</pre>
+				<h1>Setup</h1>
+
+				<h3>Add a second script tag containing the following:</h3>
+				<h3>For vertical scrolling:</h3>
+<pre>
+<code class="code_snippet">&lt;script type="text/javascript"&gt;
+  scrolli = "vrt";
+&lt;&sol;script&gt;
+
+</code>
+</pre>				
+				<h3>For horizontal scrolling:</h3>			
+<pre>
+<code class="code_snippet">&lt;script type="text/javascript"&gt;
+  scrolli = "hrz";
+&lt;&sol;script&gt;
+
+</code>
+</pre>			
+				<h1>Usage</h1>
 
 				<h3>Any <code>div</code> placed as a child of <code>body</code> will create a fullscreen page.</h3>
 <pre>
@@ -284,9 +325,10 @@
 &lt;&sol;body&gt;
 </code>
 </pre>
+				<h1>Adding a Navigation</h1>
 				<h3>Navigation MUST be defined by the <code>nav</code> tag. You may utilize the <code>nav > ul > li</code> or the <code>nav > a</code> format.</h3> 
 
-				<h3>Within, create one link per number of pages. Name them whatever you want!</h3>
+				<h3>Now, create one link per number of pages. Name them whatever you want!</h3>
 				
 <pre>
 <code class="code_snippet">&lt;body&gt;
@@ -294,11 +336,11 @@
      &lt;nav&gt; &lt;&excl;&minus;&minus;Navigation&minus;&minus;&gt;
         &lt;ul&gt;
           &lt;li&gt;Link 1&lt;&sol;li&gt;
-       	  &lt;li&gt;Link 2&lt;&sol;li&gt;
+          &lt;li&gt;Link 2&lt;&sol;li&gt;
           &lt;li&gt;Link 3&lt;&sol;li&gt;
         &lt;&sol;ul&gt;
      &lt;&sol;nav&gt;
-     &lt;p&gt;Hello World!&lt;&sol;p&gt; &lt;&excl;&minus;&minus;Other design elements on page&minus;&minus;&gt;
+     &lt;p&gt;Hello World!&lt;&sol;p&gt; &lt;&excl;&minus;&minus;Other design elements on page 1&minus;&minus;&gt;
   &lt;&sol;div&gt;
 </code>
 </pre>
@@ -319,8 +361,8 @@
   &lt;&sol;div&gt;
 </code>
 </pre>
-
-				<h3>If multiple navigation menus exist and are children of either <code>body</code> or a page <code>div</code>, add the class name <code>main_nav</code> to whichever navigation instance(s) meant to iterate the pages. </h3>
+				<h1>Multiple &lt;Nav&gt; Elements</h1>
+				<h3>If multiple navigation menus exist and are children of either <code>body</code> or a page <code>div</code>, add the class name <code>main_nav</code> to whichever navigation instance(s) meant to iterate the site. </h3>
 
 <pre>
 <code class="code_snippet">&lt;body&gt;
@@ -328,7 +370,7 @@
      &lt;nav&gt; &lt;&excl;&minus;&minus;This menu will NOT scroll through the site's pages.&minus;&minus;&gt;
         &lt;ul&gt;
           &lt;li&gt;Link 1&lt;&sol;li&gt;
-       	  &lt;li&gt;Link 2&lt;&sol;li&gt;
+          &lt;li&gt;Link 2&lt;&sol;li&gt;
           &lt;li&gt;Link 3&lt;&sol;li&gt;
         &lt;&sol;ul&gt;
      &lt;&sol;nav&gt;
@@ -336,7 +378,7 @@
      &lt;nav class="main_nav"&gt; &lt;&excl;&minus;&minus;This menu WILL scroll through the site's pages&minus;&minus;&gt;
         &lt;ul&gt;
           &lt;li&gt;Link 1&lt;&sol;li&gt;
-       	  &lt;li&gt;Link 2&lt;&sol;li&gt;
+          &lt;li&gt;Link 2&lt;&sol;li&gt;
           &lt;li&gt;Link 3&lt;&sol;li&gt;
         &lt;&sol;ul&gt;
      &lt;&sol;nav&gt;
@@ -358,24 +400,29 @@
      &lt;nav id="best_nav" class="main_nav inst1"&gt; 
         &lt;ul&gt;
           &lt;li&gt;Link 1&lt;&sol;li&gt;
-       	  &lt;li&gt;Link 2&lt;&sol;li&gt;
+          &lt;li&gt;Link 2&lt;&sol;li&gt;
           &lt;li&gt;Link 3&lt;&sol;li&gt;
         &lt;&sol;ul&gt;
      &lt;&sol;nav&gt;
   &lt;&sol;div&gt;
 </code>
 </pre>
-
-				<h3>You may give any elements of your navigation an <code>id</code> or <code>class</code> to style with CSS or JS as usual.</h3>		
+				<h1>Styling</h1>
+				<h3>You may give any elements of your navigation an <code>id</code> or <code>class</code> name to style with CSS or JS as usual.</h3>		
 
 				<h3>NOTE: This plugin reserves certain data attributes to function. Be careful when using them with HTML elements.</h3>	
 		</div>
 		<div></div>
 		
 
+		<script type="text/javascript">
 		
+		scrolli = "vrt";
+		
+			
+		</script>
 
-		<script type="text/javascript" src="scrollipop_vrt_clean.js"></script>	
+		<script src="scrollipop.js"></script>	
 
 	</body>
 </html>
