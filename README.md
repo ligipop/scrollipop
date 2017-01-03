@@ -15,5 +15,5 @@ Documentation, usage instructions, and demo can be found here:
 [scrollipop documentation](https://ligipop.github.io/scrollipop/)    
     
     
-#npm
+#npm installation
 `npm install scrollipop`
