@@ -1,6 +1,6 @@
 {
   "name": "scrollipop",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Create sliding animated websites in seconds",
   "main": "scrollipop.js",
   "scripts": {
