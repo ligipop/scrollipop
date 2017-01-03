@@ -1,6 +1,18 @@
-#Scrollipop
+#scrollipop
 ===========
+scrollipop is a lightweight, pure javascript plugin that creates animated scrolling websites in seconds!
 
-Scrollipop is a lightweight JavaScript range slider.
+All modern browsers and IE9+ are supported. scrollipop has no dependencies!
 
-All modern browsers and IE9+ are supported. Scrollipop has no dependencies!
+#License
+========
+scrollipop is licensed under the [MIT License](https://opensource.org/licenses/MIT). 
+
+#Documentation
+==============
+Documentation, usage instructions, and demo can be found here:
+[scrollipop documentation](https://ligipop.github.io/scrollipop/)
+
+#npm
+====
+`npm install scrollipop`
