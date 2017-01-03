@@ -3,6 +3,6 @@
 
 #local extras
 /artifacts/
-images/*
-!images/browser_comp.svg
-!images/scrollipop_logo.svg
+/docs/images/*
+!/docs/images/browser_comp.svg
+!/docs/images/scrollipop_logo.svg
