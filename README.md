@@ -17,3 +17,7 @@ Documentation, usage instructions, and demo can be found here:
     
 #npm download
 `npm install scrollipop`
+
+#Fixes & Updates
+###v. 1.0.4.    
+Remove unnecessary internal js user requirements
