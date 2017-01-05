@@ -1,8 +1,0 @@
-#mac trash files
-.DS_Store
-
-#local extras
-/artifacts/
-/docs/images/*
-!/docs/images/browser_comp.svg
-!/docs/images/scrollipop_logo.svg
